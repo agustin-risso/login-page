@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url(../images/background.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	animation: rotate 5s infinite alternate linear;
+}
+
+.main {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	overflow-x: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+	width: 70%;
+	height: 70%;
+	padding: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid transparent;
+	border-radius: 50px;
+	backdrop-filter: blur(35px);
+}
+
+.login-container {
+	text-align: center;
+}
+
+.header {
+	margin-bottom: 30px;
+}
+.header h1 {
+	color: #f1f1f1;
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 50px;
+}
+
+.header p {
+	color: #8a90b7;
+	font-size: 13px;
+}
+
+.header p a {
+	color: #ba68c8;
+	font-size: 13px;
+	font-weight: 600;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+.header p a:hover {
+	color: #bf4bd4;
+}
+
+.login-form {
+	width: 100%;
+	margin: 0;
+	display: grid;
+	gap: 13px;
+}
+
+.login-form .input-box input {
+	width: 100%;
+	height: 30px;
+	border: 2px solid #cecece;
+	border-radius: 0.35rem;
+	font-family: inherit;
+	font-size: 15px;
+	padding: 0 15px;
+	transition: all 0.3s;
+}
+
+.login-form .input-box input:hover {
+	border: 2px solid #ba68c8;
+}
+
+.login-form .input-box input:focus {
+	border: 2px solid #c04ed4;
+	outline: none;
+}
+
+.login-form .remember-forgot {
+	color: #8a90b7;
+	font-size: 15px;
+	margin-bottom: 15px;
+}
+
+.login-form .remember-forgot a {
+	color: #ba68c8;
+	font-size: 15px;
+	font-weight: 600;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+.login-form .remember-forgot a:hover {
+	color: #bf4bd4;
+}
+
+.login-form .submit-btn button {
+	cursor: pointer;
+	width: 100%;
+	padding: 5px 15px;
+	border: 0;
+	border-radius: 0.35rem;
+	background-color: #ba68c8;
+	color: #f0f0f0;
+	font-family: inherit;
+	font-size: 15px;
+	font-weight: 500;
+	text-align: center;
+	letter-spacing: 1.2px;
+	transition: all 0.3s;
+}
+
+.login-form .submit-btn button:hover {
+	background-color: #bf4bd4;
+}
+
+.login-form .submit-btn button:active {
+	cursor: auto;
+}
+
+.login-form .social p {
+	color: #8a90b7;
+	font-size: 15px;
+}
+
+.login-form .social .social-btns {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+.login-form .social .social-btns .social-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	width: 40%;
+	padding: 5px 10px;
+	background-color: #f0f0f0;
+	border-radius: 0.35rem;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.login-form .social .social-btns .google-btn {
+	color: #e94235;
+	border: 1px solid #e94235;
+}
+
+.login-form .social .social-btns .google-btn:hover {
+	background-color: #e94235;
+	color: #f0f0f0;
+	border: 1px solid #e94235;
+}
+
+.login-form .social .social-btns .google-btn:active {
+	cursor: auto;
+}
+
+.login-form .social .social-btns .github-btn {
+	color: #010409;
+	border: 1px solid #010409;
+}
+
+.login-form .social .social-btns .github-btn:hover {
+	background-color: #010409;
+	color: #f0f0f0;
+	border: 1px solid #010409;
+}
+
+.login-form .social .social-btns .github-btn:active {
+	cursor: auto;
+}
+
+.image-container {
+	margin-left: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.login-img {
+	width: 400px;
+	height: 400px;
+}
+
+@keyframes rotate {
+	from {
+		background-position: 0% 100%;
+	}
+	to {
+		background-position: 0% 0%;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.login-img {
+		width: 300px;
+		height: 300px;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.container {
+		justify-content: center;
+	}
+
+	.image-container {
+		margin-left: 0;
+	}
+
+	.login-img {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.container {
+		width: 90%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.login-form .social .social-btns span {
+		display: none;
+	}
+
+	.login-form .social .social-btns .social-btn {
+		width: auto;
+	}
+	.login-img {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 394px) {
+	.container {
+		width: 90%;
+		height: 70%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 10px;
+		margin-right: 0;
+	}
+}
